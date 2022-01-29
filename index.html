@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>RocketShoes</title>
+</head>
+<body>
+
+    <section>
+
+        <nav>
+
+            <div class="logo"><img src="assets/logo.svg" alt="logo"></div>
+            
+            <ul>
+                <li>Homem</li>
+                <li>Mulher</li>
+                <li>Criança</li>
+                <li>Customizar</li>
+                <li class="search"> <img src="assets/icon-search.svg" alt="search"> <input placeholder="Pesquisar" type="text" name="pesquisar" id="pesquisar"></li>
+                <li>
+                    <div class="bag">
+                        <img src="assets/icon-bag.svg" alt="bag">
+                    </div>
+                </li>
+            </ul>
+
+        </nav>
+
+        <div class="first">
+            <div>
+                <h2>Tênis <br>
+                    Esportivo  <br>
+                    Para Corrida  <br>
+                    Top</h2>
+                <p>Esse Tênis tem o intuito de te deixar ainda mais <br> fitness, focado, e musculoso</p>
+                <div class="price">R$1.000,00</div>
+                <button>COMPRAR</button>
+            </div>
+        </div>
+
+        <div class="second">
+
+            <div class="t-P"><img id='fullimg' src="assets/tenis-1-ampliado.png" alt="tênis"></div>
+
+            <div class="o-p"> 
+                <ul>         
+                    <li><img src="assets/tenis-1-galeria.png" onclick="ImgAmpliada(this)" alt=""></li>
+                    <li><img src="assets/tenis-2-galeria.png" onclick="ImgAmpliada(this)"  alt=""></li>
+                    <li><img  src="assets/tenis-3-galeria.png" onclick="ImgAmpliada(this)"  alt=""></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="third">
+            <img src="assets/img-video.png">
+            <ul>
+                <li>Facebook</li>
+                <li>Instagram</li>
+                <li>Youtube</li>
+                <li>Twitter</li>
+                <button>Explore mais <img src="assets/icon-arrow.svg" alt="arrow"> </button>
+            </ul>
+        </div>
+
+    </section>
+
+    <script>
+
+        function ImgAmpliada(smallImg){
+            var fullImg = document.getElementById("fullimg")
+            fullimg.src = smallImg.src
+        }
+
+    </script>
+    
+</body>
+</html>
