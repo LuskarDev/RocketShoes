@@ -1,6 +1,5 @@
 <h1 align="center">
-  <img alt="Restaurent Gourmet" title="Restaurent Gourmet" src="https://github.com/LuskarDev/RocketShoes/blob/main/assets/rocketShoes.png" width="120px" />
-  <p> Restaurent Gourmet</p>
+  <p> RocketShoes</p>
 </h1>
 
 <p align="center">
@@ -12,7 +11,7 @@
 <br>
 
 <p align="center">
-   <img alt="RocketShoes" title="RocketShoes" src="./images/Screenshot 2022-01-15 at 15-17-26 Restaurant Gourmet.png" width="720px" />
+   <img alt="RocketShoes" title="RocketShoes" src="https://github.com/LuskarDev/RocketShoes/blob/main/assets/rocketShoes.png" width="720px" />
 </p>
 
 ## 🚀 Tecnologias
@@ -24,7 +23,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - JavaScript
 
 ## 💻 Projeto
-Este é o meu Primeiro projeto como programador... E é apenas o começo
+Layout de um E-commerce feito totalemtne no front-end
 
 ## 🔖 Layout
 
