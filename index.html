@@ -73,7 +73,28 @@
 
     </section>
 
+    <script src="https://unpkg.com/scrollreveal"></script>
+
     <script>
+
+    var slideUp = {
+    distance: '150%',
+    origin: 'bottom',
+    easing: 'ease'
+
+};
+
+ScrollReveal().reveal('.first', slideUp);
+
+var slideRight = {
+    distance: '150%',
+    origin: 'left',
+    delay: 375,
+    reset: true,
+    easing: 'ease'
+};
+
+ScrollReveal().reveal('.second', slideRight );
 
         function ImgAmpliada(smallImg){
             var fullImg = document.getElementById("fullimg")
