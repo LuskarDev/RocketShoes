@@ -1,264 +1,256 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
-}
 
 :root {
-    --button: #FF0000;
-    --main-background:  #C4C4C4;
-    --background: #E5E5E5;
-    --text: #000;
-    --footer: #000;
-    --text-description: #9C9696;
+  --button: #FF0000;
+  --main-background:  #C4C4C4;
+  --background: #E5E5E5;
+  --text: #000;
+  --footer: #000;
+  --text-description: #9C9696;
+}
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+header nav{
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px 10px;
+  background: transparent;
+  position: fixed;
+}
+
+#nav.scroll{
+  background: rgb(48, 100, 243);
+  color: white;
+}
+
+header nav ul{
+  display: flex;
+  align-items: center;
+}
+
+header nav ul li{
+  list-style: none;
+  cursor: pointer;
+}
+
+header nav ul li a{
+  margin:10px 40px;
+  text-decoration:none ;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+header nav ul li:nth-child(5) > img{
+  position: absolute;
+  top: 8px;
+  left: 2px;
+  z-index: 1;
+}
+
+header nav ul li:nth-child(5){
+  position: relative;
+}
+
+
+header nav ul li input{
+  padding:10px 25px;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+}
+
+header nav ul li:nth-child(6){
+  margin-left: 50px;
+}
+
+.left-right{
+  display: flex;
+}
+
+
+.left-right .left{
+  text-align: left;
+  padding: 90px 30px;
+  background-color: var(--background);
+}
+
+.left-right .left h1{
+  font-size: 2.8rem;
+  font-weight:700;
+  margin-bottom: 10px;
+}
+
+.left-right .left > p{
+  color: var(--text-description);
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.left-right .left .price-button{
+  display: flex;
+  flex-direction: column;
+}
+
+.left-right .left .price-button button{
+  color: white;
+  background: var(--button);
+  border:none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  padding: 20px;
+  margin: 20px 5px;
+  cursor: pointer;
+}
+
+.left-right .left .price-button button:hover{
+  background: crimson;
+  box-shadow: 0px 2px 5px 0px black;
+}
+
+.left-right .right{
+  width: 100%;
+  padding: 65px 20px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  background-color: var(--main-background);
+}
+
+.left-right .right > img{
+  width: 350px;
+}
+
+.left-right .right .tenis-options{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.left-right .right .tenis-options img{ 
+  margin: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.left-right .right .tenis-options img:hover{
+  transform: scale(1.2);
+  transition: transform .25s ease;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer nav {
+  display: flex;
+}
+
+footer nav ul{
+  display: flex;
+  align-items: center;
+}
+
+footer button {
+  display: flex;
+  align-items: center;
+  padding: 10px 55px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  background: var(--footer);
+  color: white;
+  border:none;
+}
+
+footer button img{
+  margin-left: 10px;
+}
+
+footer nav ul li:first-child{
+  margin:0;
+  cursor: pointer;
+}
+
+footer nav ul li{
+  font-size: 1.2rem;
+  list-style: none;
+  margin: 0 30px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 644px){
+
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  img {
-      cursor: pointer;
-  }
-
-  section {
-    position: relative;
-      display: grid;
-      grid-template-columns: 35% 65% ;
-      grid-template-areas: "top top" "left right" "bottom bottom";
-      height: 100vh;
-      width: 100%;
-  }
-
-  section nav .logo {
-      margin: 2rem;
-  }
-
-  section nav {
-      position: absolute;
-      width: 100%;
-      grid-area: top;
-        display: flex;
-  }
-
-  section nav ul {
-    width: 90%;
-      list-style: none;
-      display: flex;
-      margin-top: 1rem;
-  }
-
-  section nav ul li {
-      margin: 1.5rem;
-      margin-right: 4.5rem;
-      cursor: pointer;
-
-      font-size: 1.3rem;
-      transform: uppercase;
-      font-weight: 700;     
-  }
-
-
-
-  section nav ul .search #pesquisar{
-      background: white;
-      position: relative;
-     border: none;
-      padding: 0.7rem;
-      outline: none;
-    padding-left: 1.9rem;
-
-  }
-
-  section nav ul .search img {
-      position: absolute;
-      margin-top: 0.4rem;
-      margin-left: 0.5rem;
-      z-index: 1;
-  }
-
-  section .first {
-      height: 110vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content:center;
-    grid-area: left;
-    background-color: var(--background);
-  }
-
-  section .first h2 {
-      font-size: 3rem;
-  }
-  section .first p {
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-      text-align: left;
-      color: var(--text-description);
-  }
-
-  section .first .price {
-    font-size: 2rem;
-      font-weight: 700;
-  }
-
-  section .first button {
-      background: var(--button);
-      width: 80%;
-      height: 20%;
-      padding: 1rem;
-      border: none;
-      color: white;
-      margin-top: 1rem;
-      font-weight: 700;
-      font-size: 1rem;
-      cursor: pointer;
-  }
-
-  section .second {
-    height: 110vh;
+  footer nav ul{
     display: flex;
     flex-direction: column;
+  }
+
+  footer nav ul li{
+    padding: 10px
+  }
+
+}
+
+@media (max-width: 698px){
+  .left-right{
+    flex-direction: column-reverse;
+  }
+}
+
+
+@media (max-width: 806px){
+
+footer nav ul{
+  display: flex;
+  align-items: center;
+}
+
+footer nav ul li{
+  font-size: 0.9rem;
+  margin: 0 20px;
+}
+}
+
+@media (max-width: 1006px){
+
+  header nav ul{
+    display:none;
+  }
+
+  .left-right .right{
+    width: 100%;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer button{
+    display: flex;
     align-items: center;
-    justify-content:center;
-    grid-area: right;
-    background-color: var(--main-background);
+    justify-content: center;
+    padding: 30px 0;
+    width: 100%;
   }
-
-
-  section .second .t-P img{
-      width: 28rem;
-      margin-bottom: 1rem;
-  }
-
-  section .second .o-p img {
-    margin-right: 1rem;
-    box-shadow: 0px 0px 8px 0px grey;
-    cursor: pointer;
-  }
-
-  section .second .o-p ul{
-    display: flex;
-  }
-  section .second .o-p ul li {
-    list-style: none;
-    position: relative;
-    transform: translateX(0%);
-    transition: transform .25s ease;
-
-  }
-
-
-
-  section .second .o-p ul li:hover::before{
-    content: " ";
-    position: absolute;
-    bottom: 0.4rem;
-    width: 89%;
-    height: 2px;
-    background: crimson;
-    transition: .25s ease;
-    z-index: 1;
-  }
-
-  section .third {
-    display: flex;
-    grid-area: bottom;
-    background-color: var(--background);
-  }
-
-
-  section .third ul {
-      position: relative;
-      width: 100%;
-      display: flex;
-      justify-content:flex-start;
-      align-items:center;
-  }
-
-  section .third ul li {
-      list-style: none;
-      margin-right: 5.5rem;
-      font-weight: 700;
-      font-size: 1.4rem;
-    cursor: pointer;
-  }
-
-  section .third ul li:nth-child(1){
-    margin-left: 2rem;
-
-  }
-
-
-  section .third ul button{
-    position: absolute;
-    right: 0;
-    margin: 0rem;
-      background: var(--footer);
-      color: white;
-      padding: 4.5rem;
-      display: flex;
-      justify-content:center;
-      align-items:center;
-      font-size: 1.2rem;
-      border: 0;
-    cursor: pointer;
-
-  }
-
-  section .third ul button img {
-      margin-left: 1rem;
-  }
-
-  @media (max-width: 1315px) {
-
-    section nav {
-      width: 100%;
-  }
-
-    section .second .o-p img {
-      width: 13rem;
-    }
-
-    section .third ul li {
-      list-style: none;
-      margin-right: 4.7rem;
-      font-weight: 700;
-      font-size: 1rem;
-    cursor: pointer;
-  }
-  }
-
-  @media (max-width: 1235px) {
-    section .third ul li {
-      font-size: 1rem;
-  }
-
-  section nav .logo {
-    margin-left : 4rem;
-}
-
-  section nav {
-      position: absolute;
-      right: 2rem;
-  }
-
-  section nav ul li {
-    margin: 1.5rem;
-    margin-right: 3.5rem;
-    font-size: 1rem;
-}
-}
-
-@media (max-width: 1079){
-  section nav ul li {
-    margin: 1rem;
-    margin-right: 2.5rem;
-    font-size: 1rem;
-}
-
-section nav {
-      position: absolute;
-      right: 5rem;
-  }
+  
 }
