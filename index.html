@@ -3,103 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Loja de tenis em geral">
     <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RocketShoes</title>
-</head>
+</head> 
 <body>
 
-    <section>
+    <main class="content-principal">
+        <header>
 
-        <nav>
-
-            <div class="logo"><img src="assets/logo.svg" alt="logo"></div>
-            
-            <ul>
-                <li>Homem</li>
-                <li>Mulher</li>
-                <li>Criança</li>
-                <li>Customizar</li>
-                <li class="search"> <img src="assets/icon-search.svg" alt="search"> <input placeholder="Pesquisar" type="text" name="pesquisar" id="pesquisar"></li>
-                <li>
-                    <div class="bag">
+            <nav  id="nav">
+                <div class="img-logo">
+                    <a href="index.html"><img src="assets/logo.svg" alt="logo"></a>
+                </div>
+                <ul>
+                    <li><a href="">Homem</a></li>
+                    <li><a href="">Mulher</a></li>
+                    <li><a href="">Criança</a></li>
+                    <li><a href="">Customizar</a></li>
+                    <li> 
+                        <img src="assets/icon-search.svg" alt="search">
+                        <input type="text" name="text" id="text" placeholder="Pesquisar">
+                    </li>
+                    <li>
                         <img src="assets/icon-bag.svg" alt="bag">
-                    </div>
-                </li>
-            </ul>
-
-        </nav>
-
-        <div class="first">
-            <div>
-                <h2>Tênis <br>
-                    Esportivo  <br>
-                    Para Corrida  <br>
-                    Top</h2>
-                <p>Esse Tênis tem o intuito de te deixar ainda mais <br> fitness, focado, e musculoso</p>
-                <div class="price">R$1.000,00</div>
-                <button>COMPRAR</button>
-            </div>
-        </div>
-
-        <div class="second">
-
-            <div class="t-P"><img id='fullimg' src="assets/tenis-1-ampliado.png" alt="tênis"></div>
-
-            <div class="o-p"> 
-                <ul>         
-                    <li><img src="assets/tenis-1-galeria.png" onclick="ImgAmpliada(this)" alt=""></li>
-                    <li><img src="assets/tenis-2-galeria.png" onclick="ImgAmpliada(this)"  alt=""></li>
-                    <li><img  src="assets/tenis-3-galeria.png" onclick="ImgAmpliada(this)"  alt=""></li>
+                    </li>
                 </ul>
+            </nav>
+
+        </header>
+
+        <section class="left-right">
+                
+                <div class="left">
+                <h1>Tênis <br>
+                    Esportivo <br>
+                    Para Corrida <br>
+                    Top
+                </h1>
+                <p>Esse Tênis tem o intuito de te deixar ainda mais <br> fitness,focado, e musculoso </p>
+
+                <div class="price-button">
+                    <h2>R$1.000,00</h2>
+                    <button>Comprar</button>
+                </div>
+
+                </div>
+
+                <div class="right">
+                    <img src="assets/tenis-1-ampliado.png" alt="tenis ampliado">
+
+                    <div class="tenis-options">
+                        <img src="assets/tenis-1-galeria.png" alt="tenis 1">
+                        <img src="assets/tenis-2-galeria.png" alt="tenis 2">
+                        <img src="assets/tenis-3-galeria.png" alt="tenis 3">
+                    </div>
+                </div>
             </div>
 
-        </div>
+        </section>
 
-        <div class="third">
-            <img src="assets/img-video.png">
-            <ul>
-                <li>Facebook</li>
-                <li>Instagram</li>
-                <li>Youtube</li>
-                <li>Twitter</li>
-                <button>Explore mais <img src="assets/icon-arrow.svg" alt="arrow"> </button>
-            </ul>
-        </div>
+        <footer>
 
-    </section>
+            <nav>
+                <ul>
+                    <li> <img src="assets/img-video.png" alt="video"> </li>
+                    <li>Facebook</li>
+                    <li>Instagram</li>
+                    <li>Youtube</li>
+                    <li>Twitter</li>
+                </ul>
+                
+            </nav>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
+            <button>
+                Explorar mais
+                <img src="assets/icon-arrow.svg" alt="arrow right">
+            </button>
+
+        </footer>
+
+    </main>
 
     <script>
+        /* mudar o header da página quando der scroll */
 
-    var slideUp = {
-    distance: '150%',
-    origin: 'bottom',
-    easing: 'ease'
+    const header = document.querySelector('#nav')
+    const navHegiht = header.offsetHeight
 
-};
-
-ScrollReveal().reveal('.first', slideUp);
-
-var slideRight = {
-    distance: '150%',
-    origin: 'left',
-    delay: 375,
-    reset: true,
-    easing: 'ease'
-};
-
-ScrollReveal().reveal('.second', slideRight );
-
-        function ImgAmpliada(smallImg){
-            var fullImg = document.getElementById("fullimg")
-            fullimg.src = smallImg.src
+    function changeHeaderWhenScroll(){
+    window.addEventListener('scroll', function(){
+        if(window.scrollY >= navHegiht){
+            // scroll é maior que a altura do header
+            header.classList.add('scroll')
+        } else {
+            // menor que a altura do header
+            header.classList.remove('scroll')
         }
+    })}
+
+    changeHeaderWhenScroll()
 
     </script>
     
